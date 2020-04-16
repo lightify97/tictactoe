@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(circle, rgb(48, 196, 233), rgb(1, 150, 113));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 300;
+  border: 2px dashed rgba(255, 255, 255, 0.7);
+  width: 30%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px #333;
+}
+
+.game-info > span:not(:last-child) {
+  padding-left: 2rem;
+}
+#refresh {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5em;
+  font-weight: bold;
+  text-shadow: none;
+  color: #333;
+  padding: 0.3em 0.5em;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin: 0.2em;
+  box-shadow: 2px 2px 10px #000;
+}
+#refresh:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.player-1 {
+  color: #ddd;
+}
+
+#turn {
+  color: #ddd;
+  font-weight: bold;
+}
+.board {
+  width: 50vw;
+  min-height: 70vh;
+  margin: 3rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-shadow: 2px 2px 5px #333;
+  width: 33.3333%;
+  height: auto;
+  line-height: 0.00001;
+  font-size: 15rem;
+  padding-top: 8rem;
+  text-align: center;
+  font-weight: bold;
+  user-select: none;
+}
+[id*="box"] {
+  border-left: 0;
+  border-top: 0;
+}
+#box-6,
+#box-7,
+#box-8 {
+  border-bottom: 0;
+}
+#box-2,
+#box-5,
+#box-8 {
+  border-right: 0;
+}
+
+.box:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#result {
+  font-size: 0rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  opacity: 0;
+  margin-top: 100rem;
+  transition: all 0.5s;
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 53%;
+  }
+  .board {
+    width: 95vw;
+    margin-top: 5rem;
+    min-height: 70rem;
+  }
+  .box {
+    padding-top: 20%;
+    font-size: 10rem;
+  }
+  .game-info {
+    width: 100vw;
+  }
+}
