@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
 *,
 *::before,
 *::after {
@@ -9,7 +10,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   background: radial-gradient(circle, rgb(48, 196, 233), rgb(1, 150, 113));
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,7 +21,7 @@ body {
 .title {
   text-align: center;
   font-size: 8rem;
-  font-weight: 900;
+  font-weight: 800;
   text-transform: uppercase;
   line-height: 0;
 }

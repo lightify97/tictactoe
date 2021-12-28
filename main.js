@@ -1,4 +1,5 @@
 "use strict";
+let turn;
 window.onload = function init() {
   let $board = document.getElementById('board');
   let $boxes = document.querySelectorAll('.box');
@@ -7,8 +8,8 @@ window.onload = function init() {
   let $refresh = document.getElementById('refresh');
   $refresh.addEventListener('click', init);
   let w = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  let turn = 'X';
-  $turn.innerHTML = `X`;
+  turn = turn || 'X';
+  $turn.innerHTML = turn;
   if ($turn.innerHTML == 'X') $turn.style.color = '#ddd';
   $boxes.forEach((box) => box.innerHTML = '');
   $board.style.display = 'flex';
@@ -46,7 +47,7 @@ window.onload = function init() {
         $result.style.opacity = '1';
         $result.style.fontSize = '6rem';
         $result.style.marginTop = '0';
-        turn = turn == 'X' ? 'O' : 'X';
+        turn = status.won == 'X' ? 'O' : 'X';
         $turn.innerHTML = `${turn}`;
         if (turn == 'X') $turn.style.color = '#ddd';
       }
